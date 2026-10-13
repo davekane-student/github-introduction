@@ -1,2 +1,18 @@
+---
+title: "A Beautiful Graphic"
+author: "PPBDS Student"
+format: html
+execute:
+  echo: false
+---
 
-PPBDS Student is a data maestro!
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price, color = cut)) +
+  geom_point(alpha = 0.3) +
+  labs(title = "Diamond price by carat", x = "Carat", y = "Price (USD)")
+```
